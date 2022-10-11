@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.grey,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             CircleAvatar(
               radius: 70.0,
               backgroundColor: Colors.white,
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
               indent: 80,
               endIndent: 80,
             ),
-            Card(
+            const Card(
               color: Colors.white,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.0,
@@ -66,11 +66,13 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Card(
+            const Card(
               color: Colors.white,
-              margin: EdgeInsets.symmetric(
-                horizontal: 20.0,
-                vertical: 10.0,
+              margin: EdgeInsets.only(
+                right: 20.0,
+                left: 20.0,
+                bottom: 40.0,
+                top: 10.0,
               ),
               elevation: 10,
               child: ListTile(
@@ -85,6 +87,29 @@ class MyApp extends StatelessWidget {
                   color: Colors.red,
                 ),
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Image.network(
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/256px-Facebook_icon.svg.png",
+                  width: 50,
+                  height: 50,
+                  alignment: Alignment.centerLeft,
+                ),
+                Image.network(
+                  "https://i.pinimg.com/736x/2e/1e/de/2e1ede442276a3bebda8d0ed7687b6da.jpg",
+                  width: 50,
+                  height: 50,
+                  alignment: Alignment.center,
+                ),
+                Image.network(
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png",
+                  width: 50,
+                  height: 50,
+                  alignment: Alignment.centerRight,
+                ),
+              ],
             ),
           ],
         ),
